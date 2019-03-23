@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[landscape, margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage[export]{adjustbox}
+\usepackage{fancyhdr}
+\usepackage{lmodern}
+
+\graphicspath{{./}}
+\pagenumbering{gobble}
+
+\renewcommand\familydefault{\sfdefault}
+
+% nomes dos admins para facilitar a identação durante a edição
+\newcommand{\cai}{Cainã}
+\newcommand{\gui}{Guilherme}
+\newcommand{\ike}{Ikeda}
+\newcommand{\mat}{Matheus}
+\newcommand{\rod}{Rodrigo}
+\newcommand{\vic}{Victor}
+\newcommand{\zee}{Zé}
+
+\newcolumntype{x}[1]{
+>{\centering\hspace{0pt}}p{#1}}
+
+\newcommand{\tnhl}{\tabularnewline\hline}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all headers/footers
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[L]{
+  \rule[-1.75\baselineskip]{0pt}{0pt}
+  \includegraphics[height=7\baselineskip,valign=c]{rl-logo}
+  \quad
+}
+\fancyhead[C]{
+  \begin{tabular}{ c }
+    \Huge{\textbf{HORÁRIOS DE ATENDIMENTO}} \\
+    {} \\
+    \Huge{Rede Linux 2019} \\
+  \end{tabular}
+}
+
+\setlength{\headheight}{8.5\baselineskip} % fix oversized header placement problems
+
+\begin{document}
+\begin{center}
+  \Large
+  \begin{tabular}{ |x{3.5cm}|x{3.5cm}|x{3.5cm}|x{3.5cm}|x{3.5cm}|x{3.5cm}| }
+    \hline
+    \textbf{HORÁRIO} & \textbf{SEGUNDA} & \textbf{TERÇA} & \textbf{QUARTA} & \textbf{QUINTA} & \textbf{SEXTA} \tnhl
+    08h-09h          & {}               & {}             & {}              & {}              & {}             \tnhl
+    09h-10h          & \rod             & {}             & {}              & {}              & \cai           \tnhl
+    10h-11h          & \zee             & \zee           & {}              & \vic            & \cai           \tnhl
+    11h-12h          & \zee             & \zee           & \rod            & \vic            & \cai           \tnhl
+    12h-13h          & \rod             & \rod           & {}              & {}              & \cai           \tnhl
+    13h-14h          & \gui             & \gui           & \gui            & \gui            & {}             \tnhl
+    14h-15h          & {}               & {}             & \mat            & \vic            & \mat           \tnhl
+    15h-16h          & {}               & {}             & \mat            & {}              & \mat           \tnhl
+    16h-17h          & {}               & {}             & {}              & {}              & {}             \tnhl
+    17h-18h          & {}               & {}             & {}              & {}              & {}             \tnhl
+    18h-19h          & {}               & {}             & {}              & {}              & {}             \tnhl
+    19h-20h          & {}               & \ike           & {}              & \ike            & {}             \tnhl
+    20h-21h          & {}               & \ike           & {}              & \ike            & {}             \tnhl
+  \end{tabular}
+
+  \vspace{1.5cm}
+  {\fontfamily{pbk}\selectfont
+    \normalsize
+    https://linux.ime.usp.br
+    
+    admin@linux.ime.usp.br
+  }
+\end{center}
+\end{document}
